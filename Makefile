@@ -21,7 +21,7 @@ create-periphery: ## Create network and volume for docker compose
 
 .PHONY: spin-up
 spin-up: create-periphery build-jupyter build-api ## spin all servers up
-	SYSML_RELEASE=$(sysml_release) RELEASE=$(release) docker-compose -f docker-compose.yml up
+	SYSML_RELEASE=$(sysml_release) RELEASE=$(release) docker compose -f docker-compose.yml up
 
 ##
 ## MyBinder image
